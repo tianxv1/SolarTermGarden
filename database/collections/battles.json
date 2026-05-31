@@ -1,0 +1,18 @@
+{
+  "collection_name": "battles",
+  "description": "比赛记录集合",
+  "data": [
+    {
+      "_id": "battle_template",
+      "_openid": "{openid}",
+      "plantId": "plant_001",
+      "plantName": "桃花",
+      "result": "win",
+      "playerProgress": 100,
+      "aiProgress": 80,
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "collection_name": "diseases",
+  "description": "病虫害数据集合",
+  "data": [
+    {
+      "_id": "disease_001",
+      "name": "蚜虫",
+      "icon": "/images/diseases/aphid.png",
+      "symptom": "叶片卷曲，背面有绿色小虫",
+      "correctCure": "喷肥皂水",
+      "wrongCure1": "多浇水",
+      "wrongCure2": "晒太阳",
+      "knowledge": "蚜虫可用湿布擦掉或喷洒肥皂水，也可以用大蒜水驱赶。预防方法是保持通风，及时清除杂草。",
+      "affectedPlants": ["flower", "fruit", "vegetable"]
+    },
+    {
+      "_id": "disease_002",
+      "name": "红蜘蛛",
+      "icon": "/images/diseases/spidermite.png",
+      "symptom": "叶片发黄，背面有细丝",
+      "correctCure": "增加湿度喷水",
+      "wrongCure1": "多施肥",
+      "wrongCure2": "暴晒",
+      "knowledge": "红蜘蛛喜干燥，增加湿度可抑制。可用湿布擦拭叶片，严重时使用杀螨剂。",
+      "affectedPlants": ["flower", "fruit"]
+    },
+    {
+      "_id": "disease_003",
+      "name": "白粉病",
+      "icon": "/images/diseases/powdery.png",
+      "symptom": "叶片有白色粉末",
+      "correctCure": "改善通风，摘除病叶",
+      "wrongCure1": "多浇水",
+      "wrongCure2": "施氮肥",
+      "knowledge": "白粉病可用多菌灵喷洒，注意改善通风条件。预防方法是避免叶片长期潮湿。",
+      "affectedPlants": ["flower", "vegetable"]
+    },
+    {
+      "_id": "disease_004",
+      "name": "烂根",
+      "icon": "/images/diseases/rootrot.png",
+      "symptom": "植株萎蔫，根部发黑",
+      "correctCure": "停止浇水，换土",
+      "wrongCure1": "继续浇水",
+      "wrongCure2": "施肥",
+      "knowledge": "烂根通常由浇水过多引起，需修剪烂根并更换土壤。预防方法是控制浇水量，确保排水良好。",
+      "affectedPlants": ["flower", "fruit", "vegetable"]
+    }
+  ]
+}

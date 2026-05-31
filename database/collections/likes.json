@@ -1,0 +1,14 @@
+{
+  "collection_name": "likes",
+  "description": "点赞记录集合",
+  "data": [
+    {
+      "_id": "like_template",
+      "postId": "post_template",
+      "_openid": "{openid}",
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

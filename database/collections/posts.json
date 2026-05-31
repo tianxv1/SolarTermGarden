@@ -1,0 +1,25 @@
+{
+  "collection_name": "posts",
+  "description": "用户帖子集合",
+  "data": [
+    {
+      "_id": "post_template",
+      "title": "示例帖子标题",
+      "content": "这是一个示例帖子内容，分享我的种植心得...",
+      "images": [],
+      "solarTerm": "立春",
+      "userId": "{openid}",
+      "userName": "匿名用户",
+      "userAvatar": "",
+      "likes": 0,
+      "comments": 0,
+      "status": "active",
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      },
+      "updateTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "collection_name": "favorites",
+  "description": "收藏数据集合",
+  "data": [
+    {
+      "_id": "favorite_template",
+      "_openid": "{openid}",
+      "itemId": "plant_001",
+      "type": "plant",
+      "title": "桃花",
+      "icon": "/images/plants/peach.png",
+      "content": "桃花是春天的使者...",
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

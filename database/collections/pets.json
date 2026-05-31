@@ -1,0 +1,22 @@
+{
+  "collection_name": "pets",
+  "description": "宠物数据集合",
+  "data": [
+    {
+      "_id": "pet_template",
+      "_openid": "{openid}",
+      "type": "cat",
+      "name": "小花",
+      "hunger": 80,
+      "energy": 60,
+      "intimacy": 30,
+      "level": 1,
+      "exp": 0,
+      "expToNext": 100,
+      "lastFeedTime": null,
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

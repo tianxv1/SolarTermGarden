@@ -1,0 +1,16 @@
+{
+  "collection_name": "guardLogs",
+  "description": "守护日志集合",
+  "data": [
+    {
+      "_id": "guard_template",
+      "userId": "{openid}",
+      "petId": "pet_template",
+      "result": "success",
+      "cropsLost": [],
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

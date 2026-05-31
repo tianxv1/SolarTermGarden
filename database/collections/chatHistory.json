@@ -1,0 +1,15 @@
+{
+  "collection_name": "chatHistory",
+  "description": "聊天记录集合",
+  "data": [
+    {
+      "_id": "chat_template",
+      "_openid": "{openid}",
+      "role": "user",
+      "content": "你好",
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

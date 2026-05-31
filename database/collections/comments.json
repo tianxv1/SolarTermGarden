@@ -1,0 +1,17 @@
+{
+  "collection_name": "comments",
+  "description": "评论数据集合",
+  "data": [
+    {
+      "_id": "comment_template",
+      "postId": "post_template",
+      "content": "这是一个示例评论",
+      "userId": "{openid}",
+      "userName": "匿名用户",
+      "userAvatar": "",
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "collection_name": "plants",
+  "description": "植物种类集合",
+  "data": [
+    {
+      "_id": "plant_001",
+      "name": "桃花",
+      "type": "flower",
+      "icon": "/images/plants/peach.png",
+      "suitableSolarTerms": ["立春", "雨水"],
+      "growTime": 72,
+      "price": 20,
+      "sellPrice": 80,
+      "description": "桃花是春天的使者，花语是爱情的俘虏。桃花原产于中国，已有3000多年的栽培历史。",
+      "plantingGuide": [
+        "选种：选择饱满、无病虫害的种子",
+        "播种：春季3-4月播种，土壤要疏松肥沃",
+        "浇水：保持土壤湿润，但不要积水",
+        "施肥：生长期每月施一次有机肥",
+        "修剪：花后及时修剪，促进新枝生长"
+      ],
+      "pestControl": "注意防治蚜虫和红蜘蛛，可用肥皂水喷洒",
+      "farmingAdvice": "立春播种，雨水移栽，春分修剪，谷雨施肥",
+      "diseases": ["disease_001", "disease_002"]
+    },
+    {
+      "_id": "plant_002",
+      "name": "西瓜",
+      "type": "fruit",
+      "icon": "/images/plants/watermelon.png",
+      "suitableSolarTerms": ["立夏", "小满"],
+      "growTime": 96,
+      "price": 30,
+      "sellPrice": 120,
+      "description": "西瓜是夏日消暑佳品，含有丰富的水分和维生素。原产于非洲，后传入中国。",
+      "plantingGuide": [
+        "选种：选择抗病性强的品种",
+        "播种：夏季5-6月播种，需要充足阳光",
+        "浇水：保持充足水分，果实膨大期需水量大",
+        "施肥：基肥要足，追肥要及时",
+        "整枝：保留主蔓和2-3条侧蔓，摘除多余侧枝"
+      ],
+      "pestControl": "注意防治白粉病和蚜虫，可用多菌灵喷洒",
+      "farmingAdvice": "立夏播种，小满移栽，芒种整枝，夏至收获",
+      "diseases": ["disease_001", "disease_003"]
+    },
+    {
+      "_id": "plant_003",
+      "name": "菊花",
+      "type": "flower",
+      "icon": "/images/plants/chrysanthemum.png",
+      "suitableSolarTerms": ["白露", "秋分"],
+      "growTime": 60,
+      "price": 25,
+      "sellPrice": 100,
+      "description": "秋天的代表花卉，象征着高洁和长寿。菊花品种繁多，色彩丰富。",
+      "plantingGuide": [
+        "选种：选择适合当地气候的品种",
+        "播种：秋季9-10月播种",
+        "浇水：控制浇水量，避免积水",
+        "施肥：生长期每两周施一次稀薄液肥",
+        "摘心：适时摘心促进分枝"
+      ],
+      "pestControl": "注意防治蚜虫和叶斑病，可用多菌灵喷洒",
+      "farmingAdvice": "白露播种，秋分移栽，寒露施肥，霜降观赏",
+      "diseases": ["disease_001", "disease_003"]
+    },
+    {
+      "_id": "plant_004",
+      "name": "菠菜",
+      "type": "vegetable",
+      "icon": "/images/plants/spinach.png",
+      "suitableSolarTerms": ["雨水", "惊蛰"],
+      "growTime": 48,
+      "price": 15,
+      "sellPrice": 50,
+      "description": "菠菜营养丰富，含有丰富的铁质和维生素。耐寒性强，是春季常见蔬菜。",
+      "plantingGuide": [
+        "选种：选择耐寒性强的品种",
+        "播种：早春或秋季播种",
+        "浇水：保持土壤湿润",
+        "施肥：基肥充足，追肥2-3次",
+        "采收：叶片长大后及时采收"
+      ],
+      "pestControl": "注意防治霜霉病和蚜虫",
+      "farmingAdvice": "雨水播种，惊蛰出苗，春分间苗，清明采收",
+      "diseases": ["disease_001"]
+    },
+    {
+      "_id": "plant_005",
+      "name": "桂花",
+      "type": "flower",
+      "icon": "/images/plants/osmanthus.png",
+      "suitableSolarTerms": ["秋分", "寒露"],
+      "growTime": 84,
+      "price": 40,
+      "sellPrice": 150,
+      "description": "桂花香气浓郁，是中国传统名花。桂花可制作桂花茶、桂花糕等美食。",
+      "plantingGuide": [
+        "选种：选择花香浓郁的品种",
+        "播种：秋季播种或春季移栽",
+        "浇水：保持土壤湿润，忌积水",
+        "施肥：春季施氮肥，秋季施磷钾肥",
+        "修剪：花后修剪整形"
+      ],
+      "pestControl": "注意防治红蜘蛛和介壳虫",
+      "farmingAdvice": "秋分播种，寒露移栽，立冬施肥，冬至养护",
+      "diseases": ["disease_002"]
+    }
+  ]
+}

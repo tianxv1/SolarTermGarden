@@ -1,0 +1,21 @@
+{
+  "collection_name": "users",
+  "description": "用户数据集合",
+  "data": [
+    {
+      "_id": "user_template",
+      "_openid": "{openid}",
+      "nickName": "匿名用户",
+      "avatarUrl": "",
+      "gold": 100,
+      "medals": 0,
+      "knowledgePoints": 0,
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      },
+      "updateTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

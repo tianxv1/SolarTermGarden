@@ -1,0 +1,28 @@
+{
+  "collection_name": "crops",
+  "description": "作物实例集合",
+  "data": [
+    {
+      "_id": "crop_template",
+      "_openid": "{openid}",
+      "plantId": "plant_001",
+      "name": "桃花",
+      "type": "flower",
+      "icon": "/images/plants/peach.png",
+      "plantTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      },
+      "growTime": 72,
+      "health": 100,
+      "status": "growing",
+      "position": 0,
+      "lastWaterTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      },
+      "sellPrice": 80,
+      "createTime": {
+        "$date": "2024-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

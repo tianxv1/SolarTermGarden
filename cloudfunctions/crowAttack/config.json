@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "openapi": [
+      "subscribeMessage"
+    ]
+  },
+  "triggers": [
+    {
+      "name": "crowAttackTrigger",
+      "type": "timer",
+      "config": "0 0 * * * *"
+    }
+  ]
+}
