@@ -273,11 +273,11 @@ function renderAchievementPopup(ctx, screenWidth, screenHeight, achievement, pro
   ctx.translate(-popupWidth/2, -popupHeight/2)
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.98)'
-  roundRect(ctx, 0, 0, popupWidth, popupHeight, 20)
+  roundRect(ctx, 0, 0, popupWidth, popupHeight, [20, 20, 20, 20])
   ctx.fill()
 
   ctx.fillStyle = '#f59e0b'
-  roundRect(ctx, popupWidth/2 - 50, -15, 100, 30, 15)
+  roundRect(ctx, popupWidth/2 - 50, -15, 100, 30, [15, 15, 15, 15])
   ctx.fill()
   ctx.fillStyle = '#fff'
   ctx.font = 'bold 12px sans-serif'
@@ -294,7 +294,7 @@ function renderAchievementPopup(ctx, screenWidth, screenHeight, achievement, pro
 
   if (achievement.reward && achievement.reward.coins > 0) {
     ctx.fillStyle = '#fef3c7'
-    roundRect(ctx, popupWidth/2 - 60, 100, 120, 35, 17)
+    roundRect(ctx, popupWidth/2 - 60, 100, 120, 35, [17, 17, 17, 17])
     ctx.fill()
     ctx.fillStyle = '#f59e0b'
     ctx.font = 'bold 14px sans-serif'
@@ -329,7 +329,7 @@ function renderAchievementList(ctx, screenWidth, screenHeight, options = {}) {
 
     catAchievements.forEach(ach => {
       ctx.fillStyle = ach.unlocked ? 'rgba(255, 255, 255, 0.95)' : 'rgba(239, 239, 239, 0.8)'
-      roundRect(ctx, 15, currentY, screenWidth - 30, 60, 12)
+      roundRect(ctx, 15, currentY, screenWidth - 30, 60, [12, 12, 12, 12])
       ctx.fill()
 
       if (ach.unlocked) {
@@ -361,7 +361,7 @@ function renderAchievementList(ctx, screenWidth, screenHeight, options = {}) {
 
       if (ach.reward && ach.reward.coins > 0) {
         ctx.fillStyle = '#fef3c7'
-        roundRect(ctx, screenWidth - 90, currentY + 15, 60, 28, 14)
+        roundRect(ctx, screenWidth - 90, currentY + 15, 60, 28, [14, 14, 14, 14])
         ctx.fill()
         ctx.fillStyle = '#f59e0b'
         ctx.font = 'bold 11px sans-serif'

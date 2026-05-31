@@ -239,22 +239,22 @@ function renderTooltip(ctx, screenWidth, tooltip) {
 
   if (highlight) {
     ctx.fillStyle = highlight.color || 'rgba(255, 215, 0, 0.3)'
-    roundRect(ctx, highlight.x - 5, highlight.y - 5, highlight.width + 10, highlight.height + 10, 10)
+    roundRect(ctx, highlight.x - 5, highlight.y - 5, highlight.width + 10, highlight.height + 10, [10, 10, 10, 10])
     ctx.fill()
 
     ctx.strokeStyle = highlight.color || '#ffd700'
     ctx.lineWidth = 2
-    roundRect(ctx, highlight.x - 5, highlight.y - 5, highlight.width + 10, highlight.height + 10, 10)
+    roundRect(ctx, highlight.x - 5, highlight.y - 5, highlight.width + 10, highlight.height + 10, [10, 10, 10, 10])
     ctx.stroke()
   }
 
   ctx.fillStyle = typeStyle.bgColor
-  roundRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, 8)
+  roundRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, [8, 8, 8, 8])
   ctx.fill()
 
   ctx.strokeStyle = typeStyle.borderColor
   ctx.lineWidth = 2
-  roundRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, 8)
+  roundRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, [8, 8, 8, 8])
   ctx.stroke()
 
   const arrowSymbol = TOOLTIP_ARROWS[arrow] || TOOLTIP_ARROWS.top
@@ -314,7 +314,7 @@ function renderHighlightPulse(ctx, x, y, width, height, progress) {
   ctx.globalAlpha = alpha
   ctx.strokeStyle = '#ffd700'
   ctx.lineWidth = 3
-  roundRect(ctx, centerX - scaledWidth / 2, centerY - scaledHeight / 2, scaledWidth, scaledHeight, 12)
+  roundRect(ctx, centerX - scaledWidth / 2, centerY - scaledHeight / 2, scaledWidth, scaledHeight, [12, 12, 12, 12])
   ctx.stroke()
   ctx.restore()
 }
@@ -326,12 +326,12 @@ function renderHandPointer(ctx, x, y, progress) {
   ctx.translate(x, y - bounce)
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'
-  roundRect(ctx, -15, -25, 30, 35, 8)
+  roundRect(ctx, -15, -25, 30, 35, [8, 8, 8, 8])
   ctx.fill()
 
   ctx.strokeStyle = '#c9305a'
   ctx.lineWidth = 2
-  roundRect(ctx, -15, -25, 30, 35, 8)
+  roundRect(ctx, -15, -25, 30, 35, [8, 8, 8, 8])
   ctx.stroke()
 
   ctx.fillStyle = '#c9305a'

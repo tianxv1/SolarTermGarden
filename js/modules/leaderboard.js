@@ -178,7 +178,7 @@ function renderLeaderboardHeader(ctx, screenWidth, type, myRank) {
   const typeInfo = LEADERBOARD_TYPES[type] || LEADERBOARD_TYPES.coins
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, 80, screenWidth - 30, 60, 15)
+  roundRect(ctx, 15, 80, screenWidth - 30, 60, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = typeInfo.color || '#666'
@@ -221,17 +221,17 @@ function renderRankingsList(ctx, screenWidth, screenHeight, options = {}) {
 
     if (isMe) {
       ctx.fillStyle = 'rgba(255, 245, 157, 0.5)'
-      roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 8, 12)
+      roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 8, [12, 12, 12, 12])
       ctx.fill()
     } else {
       ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-      roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 8, 12)
+      roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 8, [12, 12, 12, 12])
       ctx.fill()
     }
 
     if (isTop3 && tier) {
       ctx.fillStyle = tier.color
-      roundRect(ctx, 20, y + 8, 36, 36, 18)
+      roundRect(ctx, 20, y + 8, 36, 36, [18, 18, 18, 18])
       ctx.fill()
       ctx.fillStyle = '#fff'
       ctx.font = 'bold 14px sans-serif'
@@ -239,7 +239,7 @@ function renderRankingsList(ctx, screenWidth, screenHeight, options = {}) {
       ctx.fillText(tier.icon, 38, y + 30)
     } else {
       ctx.fillStyle = '#e5e7eb'
-      roundRect(ctx, 20, y + 8, 36, 36, 18)
+      roundRect(ctx, 20, y + 8, 36, 36, [18, 18, 18, 18])
       ctx.fill()
       ctx.fillStyle = '#666'
       ctx.font = 'bold 14px sans-serif'
@@ -296,7 +296,7 @@ function renderMyRankCard(ctx, screenWidth, myRank, type) {
   const cardY = screenHeight - 90
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, cardY, screenWidth - 30, 70, 15)
+  roundRect(ctx, 15, cardY, screenWidth - 30, 70, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#c9305a'
@@ -308,7 +308,7 @@ function renderMyRankCard(ctx, screenWidth, myRank, type) {
     const tier = leaderboardManager.getRankTier(myRank.rank)
 
     ctx.fillStyle = tier ? tier.color : '#ffd700'
-    roundRect(ctx, 25, cardY + 35, 50, 25, 12)
+    roundRect(ctx, 25, cardY + 35, 50, 25, [12, 12, 12, 12])
     ctx.fill()
     ctx.fillStyle = '#fff'
     ctx.font = 'bold 14px sans-serif'

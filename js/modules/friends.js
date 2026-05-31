@@ -311,7 +311,7 @@ function renderFriendsList(ctx, screenWidth, screenHeight, options = {}) {
     const isOnline = friend.lastActive && (Date.now() - friend.lastActive) < 300000
 
     ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-    roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 10, 12)
+    roundRect(ctx, 15, y, screenWidth - 30, itemHeight - 10, [12, 12, 12, 12])
     ctx.fill()
 
     ctx.fillStyle = friend.avatarUrl ? '#fce7eb' : '#e5e7eb'
@@ -345,7 +345,7 @@ function renderFriendsList(ctx, screenWidth, screenHeight, options = {}) {
 
     const btnX = screenWidth - 100
     ctx.fillStyle = '#c9305a'
-    roundRect(ctx, btnX, y + 15, 70, 28, 14)
+    roundRect(ctx, btnX, y + 15, 70, 28, [14, 14, 14, 14])
     ctx.fill()
     ctx.fillStyle = '#fff'
     ctx.font = '12px sans-serif'
@@ -371,7 +371,7 @@ function renderFriendRequestDialog(ctx, screenWidth, screenHeight, request) {
   const dialogY = (screenHeight - dialogHeight) / 2
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.98)'
-  roundRect(ctx, dialogX, dialogY, dialogWidth, dialogHeight, 20)
+  roundRect(ctx, dialogX, dialogY, dialogWidth, dialogHeight, [20, 20, 20, 20])
   ctx.fill()
 
   ctx.fillStyle = '#333'
@@ -388,14 +388,14 @@ function renderFriendRequestDialog(ctx, screenWidth, screenHeight, request) {
   const btnY = dialogY + 120
 
   ctx.fillStyle = '#22c55e'
-  roundRect(ctx, screenWidth / 2 - btnWidth - 20, btnY, btnWidth, btnHeight, 20)
+  roundRect(ctx, screenWidth / 2 - btnWidth - 20, btnY, btnWidth, btnHeight, [20, 20, 20, 20])
   ctx.fill()
   ctx.fillStyle = '#fff'
   ctx.font = '14px sans-serif'
   ctx.fillText('接受', screenWidth / 2 - btnWidth / 2 - 20, btnY + 26)
 
   ctx.fillStyle = '#999'
-  roundRect(ctx, screenWidth / 2 + 20, btnY, btnWidth, btnHeight, 20)
+  roundRect(ctx, screenWidth / 2 + 20, btnY, btnWidth, btnHeight, [20, 20, 20, 20])
   ctx.fill()
   ctx.fillStyle = '#fff'
   ctx.fillText('拒绝', screenWidth / 2 + btnWidth / 2 + 20, btnY + 26)

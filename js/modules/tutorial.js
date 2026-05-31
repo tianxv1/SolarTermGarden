@@ -255,7 +255,7 @@ function renderTutorialOverlay(ctx, screenWidth, screenHeight, step) {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
   ctx.shadowColor = 'rgba(0, 0, 0, 0.1)'
   ctx.shadowBlur = 20
-  roundRect(ctx, 20, panelY, screenWidth - 40, panelHeight, 20)
+  roundRect(ctx, 20, panelY, screenWidth - 40, panelHeight, [20, 20, 20, 20])
   ctx.fill()
   ctx.shadowBlur = 0
 
@@ -274,7 +274,7 @@ function renderTutorialOverlay(ctx, screenWidth, screenHeight, step) {
   const btnY = panelY + panelHeight - 60
 
   ctx.fillStyle = '#c9305a'
-  roundRect(ctx, btnX, btnY, btnWidth, btnHeight, 20)
+  roundRect(ctx, btnX, btnY, btnWidth, btnHeight, [20, 20, 20, 20])
   ctx.fill()
 
   ctx.fillStyle = '#fff'

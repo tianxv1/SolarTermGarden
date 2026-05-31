@@ -262,7 +262,7 @@ function renderFeedbackForm(ctx, screenWidth, screenHeight, options = {}) {
     const isSelected = key === selectedType
 
     ctx.fillStyle = isSelected ? type.color : 'rgba(0, 0, 0, 0.05)'
-    roundRect(ctx, x, currentY, typeBtnWidth, 40, 8)
+    roundRect(ctx, x, currentY, typeBtnWidth, 40, [8, 8, 8, 8])
     ctx.fill()
 
     if (isSelected) {
@@ -281,7 +281,7 @@ function renderFeedbackForm(ctx, screenWidth, screenHeight, options = {}) {
 
   currentY += 60
   ctx.fillStyle = '#fff'
-  roundRect(ctx, 20, currentY, screenWidth - 40, 150, 12)
+  roundRect(ctx, 20, currentY, screenWidth - 40, 150, [12, 12, 12, 12])
   ctx.fill()
 
   ctx.fillStyle = '#999'
@@ -301,7 +301,7 @@ function renderFeedbackForm(ctx, screenWidth, screenHeight, options = {}) {
 
   currentY += 170
   ctx.fillStyle = '#fff'
-  roundRect(ctx, 20, currentY, screenWidth - 40, 40, 8)
+  roundRect(ctx, 20, currentY, screenWidth - 40, 40, [8, 8, 8, 8])
   ctx.fill()
 
   ctx.fillStyle = '#999'
@@ -312,7 +312,7 @@ function renderFeedbackForm(ctx, screenWidth, screenHeight, options = {}) {
   currentY += 60
 
   ctx.fillStyle = 'rgba(201, 48, 90, 0.9)'
-  roundRect(ctx, 20, currentY, screenWidth - 40, 50, 25)
+  roundRect(ctx, 20, currentY, screenWidth - 40, 50, [25, 25, 25, 25])
   ctx.fill()
 
   ctx.fillStyle = '#fff'
@@ -331,7 +331,7 @@ function renderFeedbackHistoryItem(ctx, screenWidth, feedback, index) {
   const status = FEEDBACK_STATUS[feedback.status] || FEEDBACK_STATUS.pending
 
   ctx.fillStyle = feedback.read ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 245, 157, 0.3)'
-  roundRect(ctx, 15, itemY, screenWidth - 30, 80, 12)
+  roundRect(ctx, 15, itemY, screenWidth - 30, 80, [12, 12, 12, 12])
   ctx.fill()
 
   if (!feedback.read) {
@@ -385,7 +385,7 @@ function renderQuickFeedback(ctx, screenWidth, questions, selectedQuestions = []
     const height = 40
 
     ctx.fillStyle = isSelected ? 'rgba(201, 48, 90, 0.1)' : 'rgba(0, 0, 0, 0.05)'
-    roundRect(ctx, x, y, width, height, 8)
+    roundRect(ctx, x, y, width, height, [8, 8, 8, 8])
     ctx.fill()
 
     if (isSelected) {

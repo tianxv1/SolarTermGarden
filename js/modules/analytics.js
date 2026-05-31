@@ -190,7 +190,7 @@ function renderAnalyticsOverview(ctx, screenWidth, screenHeight, stats, scrollY 
   let currentY = 80 - scrollY
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, currentY, screenWidth - 30, 120, 15)
+  roundRect(ctx, 15, currentY, screenWidth - 30, 120, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#c9305a'
@@ -222,7 +222,7 @@ function renderAnalyticsOverview(ctx, screenWidth, screenHeight, stats, scrollY 
   currentY += 140
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, currentY, screenWidth - 30, 100, 15)
+  roundRect(ctx, 15, currentY, screenWidth - 30, 100, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#3b82f6'
@@ -247,7 +247,7 @@ function renderAnalyticsOverview(ctx, screenWidth, screenHeight, stats, scrollY 
 
 function renderGardeningChart(ctx, screenWidth, stats, startY) {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, startY, screenWidth - 30, 180, 15)
+  roundRect(ctx, 15, startY, screenWidth - 30, 180, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#22c55e'
@@ -267,7 +267,7 @@ function renderGardeningChart(ctx, screenWidth, stats, startY) {
     const y = startY + 50 + Math.floor(i / 2) * 50
 
     ctx.fillStyle = '#f5f5f5'
-    roundRect(ctx, x, y, (screenWidth - 70) / 2, 40, 8)
+    roundRect(ctx, x, y, (screenWidth - 70) / 2, 40, [8, 8, 8, 8])
     ctx.fill()
 
     ctx.font = '18px sans-serif'
@@ -285,7 +285,7 @@ function renderGardeningChart(ctx, screenWidth, stats, startY) {
   })
 
   ctx.fillStyle = '#fef3c7'
-  roundRect(ctx, 25, startY + 145, screenWidth - 50, 28, 8)
+  roundRect(ctx, 25, startY + 145, screenWidth - 50, 28, [8, 8, 8, 8])
   ctx.fill()
   ctx.fillStyle = '#f59e0b'
   ctx.font = '12px sans-serif'
@@ -297,7 +297,7 @@ function renderGardeningChart(ctx, screenWidth, stats, startY) {
 
 function renderSocialChart(ctx, screenWidth, stats, startY) {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, startY, screenWidth - 30, 180, 15)
+  roundRect(ctx, 15, startY, screenWidth - 30, 180, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#3b82f6'
@@ -317,7 +317,7 @@ function renderSocialChart(ctx, screenWidth, stats, startY) {
     const y = startY + 50 + Math.floor(i / 2) * 55
 
     ctx.fillStyle = '#f5f5f5'
-    roundRect(ctx, x, y, (screenWidth - 70) / 2, 45, 8)
+    roundRect(ctx, x, y, (screenWidth - 70) / 2, 45, [8, 8, 8, 8])
     ctx.fill()
 
     ctx.fillStyle = '#333'
@@ -335,7 +335,7 @@ function renderSocialChart(ctx, screenWidth, stats, startY) {
 
 function renderCombatChart(ctx, screenWidth, stats, startY) {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
-  roundRect(ctx, 15, startY, screenWidth - 30, 150, 15)
+  roundRect(ctx, 15, startY, screenWidth - 30, 150, [15, 15, 15, 15])
   ctx.fill()
 
   ctx.fillStyle = '#ef4444'

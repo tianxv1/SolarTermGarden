@@ -332,11 +332,13 @@ function renderSolarTermBadge(ctx, x, y, solarTerm, size = 50) {
 }
 
 function renderEventBanner(ctx, screenWidth, event, progress = 0) {
+  if (!event || !event.endDate) return
+
   const bannerHeight = 80
   const bannerY = 0
 
   ctx.fillStyle = 'rgba(0, 0, 0, 0.7)'
-  roundRect(ctx, 0, bannerY, screenWidth, bannerHeight, 0)
+  roundRect(ctx, 0, bannerY, screenWidth, bannerHeight, [0, 0, 0, 0])
   ctx.fill()
 
   const daysLeft = calculateDaysLeft(event.endDate)
@@ -357,11 +359,11 @@ function renderEventBanner(ctx, screenWidth, event, progress = 0) {
     const barY = bannerY + 60
 
     ctx.fillStyle = 'rgba(255, 255, 255, 0.3)'
-    roundRect(ctx, barX, barY, barWidth, barHeight, barHeight / 2)
+    roundRect(ctx, barX, barY, barWidth, barHeight, [barHeight/2, barHeight/2, barHeight/2, barHeight/2])
     ctx.fill()
 
     ctx.fillStyle = '#ffd700'
-    roundRect(ctx, barX, barY, barWidth * Math.min(1, progress), barHeight, barHeight / 2)
+    roundRect(ctx, barX, barY, barWidth * Math.min(1, progress), barHeight, [barHeight/2, barHeight/2, barHeight/2, barHeight/2])
     ctx.fill()
   }
 }
@@ -376,7 +378,7 @@ function renderEventDetailDialog(ctx, screenWidth, screenHeight, event, progress
   const dialogY = (screenHeight - dialogHeight) / 2
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.98)'
-  roundRect(ctx, dialogX, dialogY, dialogWidth, dialogHeight, 20)
+  roundRect(ctx, dialogX, dialogY, dialogWidth, dialogHeight, [20, 20, 20, 20])
   ctx.fill()
 
   ctx.fillStyle = '#ffd700'
@@ -396,13 +398,13 @@ function renderEventDetailDialog(ctx, screenWidth, screenHeight, event, progress
     const completed = current >= total
 
     ctx.fillStyle = completed ? 'rgba(34, 197, 94, 0.1)' : 'rgba(0, 0, 0, 0.03)'
-    roundRect(ctx, dialogX + 15, taskY, dialogWidth - 30, 70, 12)
+    roundRect(ctx, dialogX + 15, taskY, dialogWidth - 30, 70, [12, 12, 12, 12])
     ctx.fill()
 
     if (completed) {
       ctx.strokeStyle = '#22c55e'
       ctx.lineWidth = 1
-      roundRect(ctx, dialogX + 15, taskY, dialogWidth - 30, 70, 12)
+      roundRect(ctx, dialogX + 15, taskY, dialogWidth - 30, 70, [12, 12, 12, 12])
       ctx.stroke()
     }
 
@@ -422,7 +424,7 @@ function renderEventDetailDialog(ctx, screenWidth, screenHeight, event, progress
 
     if (task.reward.coins > 0) {
       ctx.fillStyle = '#fef3c7'
-      roundRect(ctx, dialogX + dialogWidth - 100, taskY + 40, 70, 24, 12)
+      roundRect(ctx, dialogX + dialogWidth - 100, taskY + 40, 70, 24, [12, 12, 12, 12])
       ctx.fill()
       ctx.fillStyle = '#f59e0b'
       ctx.font = 'bold 11px sans-serif'
@@ -439,11 +441,12 @@ function renderEventDetailDialog(ctx, screenWidth, screenHeight, event, progress
 }
 
 function renderSeasonBonus(ctx, screenWidth, season, bonuses) {
+  if (!bonuses || bonuses.length === 0) return
   const seasonInfo = SEASONAL_ACTIVITIES[season]
   if (!seasonInfo) return
 
   ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'
-  roundRect(ctx, 15, 100, screenWidth - 30, 50, 12)
+  roundRect(ctx, 15, 100, screenWidth - 30, 50, [12, 12, 12, 12])
   ctx.fill()
 
   ctx.fillStyle = seasonInfo.color
@@ -460,6 +463,7 @@ function renderSeasonBonus(ctx, screenWidth, season, bonuses) {
 }
 
 function calculateDaysLeft(endDate) {
+  if (!endDate) return 0
   const now = new Date()
   const [month, day] = endDate.split('-').map(Number)
   const end = new Date(now.getFullYear(), month - 1, day)
